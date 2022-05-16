@@ -26,6 +26,12 @@
     transform: translateY(-5px);
 }
 
+@media screen and (max-width: 500px) {
+    .skill-box{
+        font-size: 1.1rem;
+    }
+}
+
 .violet-shadow{
     color: violet;
     box-shadow: 0 5px 7px 0 rgba(194, 128, 255, 0.65);

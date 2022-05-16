@@ -16,12 +16,12 @@ function ProjectBox({ project }) {
         ))}
       </div>
       {project.sourceCode && (
-        <a href={project.sourceCode} className="link source-link">
+        <a target="_blank" rel="noreferrer" href={project.sourceCode} className="link source-link">
           <GitHubIcon />
         </a>
       )}
       {project.livePreview && (
-        <a href={project.livePreview} className="link source-link">
+        <a target="_blank" rel="noreferrer" href={project.livePreview} className="link source-link">
           <LinkIcon />
         </a>
       )}
