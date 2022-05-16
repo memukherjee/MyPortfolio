@@ -1,0 +1,60 @@
+.project-box{
+    background-color: var(--form-bg);
+    border-radius: 7px;
+    margin: 20px 1%;
+    padding: 40px 15px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s;
+    flex: 28%;
+    max-width: 28%;
+    min-width: 230px;
+}
+
+.project-box:hover{
+    transform: translateY(-7px);
+}
+
+.project-name{
+    font-weight: 900;
+    font-size: 1.75rem;
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.project-desc{
+    font-size: 1.05rem;
+    font-family: "Radio Canada", sans-serif;
+    font-weight: 100;
+}
+
+.stack{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 70%;
+    margin: auto;
+    font-size: 0.8rem;
+    font-weight: 500;
+    font-family: 'Roboto Flex', sans-serif;
+    margin-bottom: 2em;
+}
+
+.tech{
+    margin: 0.2em 0;
+}
+
+.source-link{
+  padding-bottom: 0.3em;
+  margin: 20px 10px;
+}
+
+.source-link:hover{
+    --underline: var(--text-secondary);
+    color: var(--text-secondary);
+}
+
+@media screen and (max-width: 500px) {
+    .project-box{
+        margin: 10px 15px;
+    }
+}

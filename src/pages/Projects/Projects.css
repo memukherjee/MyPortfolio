@@ -1,0 +1,14 @@
+.projects {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px auto;
+  max-width: 900px;
+  color: var(--accent);
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 500px) {
+  .projects {
+    flex-wrap: wrap;
+  }
+}

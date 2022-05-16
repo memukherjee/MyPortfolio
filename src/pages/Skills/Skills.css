@@ -1,0 +1,56 @@
+.skills{
+    color: var(--accent);
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 500px;
+    margin: 20px auto 50px;
+}
+
+.skill-box{
+    box-shadow: var(--skill-shadow);
+    background-color: var(--skill-bg);
+    padding: 0.8em 1em;
+    margin: 0.8em 0.5em;
+    transition: transform 0.3s;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.2rem;
+    font-family: 'Roboto Flex', sans-serif;
+    border-radius: 3px;
+}
+
+.skill-box:hover{
+    transform: translateY(-5px);
+}
+
+.violet-shadow{
+    color: violet;
+    box-shadow: 0 5px 7px 0 rgba(194, 128, 255, 0.65);
+}
+.indigo-shadow{
+    color: rgb(88, 208, 255);
+    box-shadow: 0 5px 7px 0 rgba(108, 218, 255, 0.65);
+}
+.blue-shadow{
+    color: #4e4edc;
+    box-shadow: 0 5px 7px 0 rgba(90, 125, 239, 0.65);
+}
+.green-shadow{
+    color: rgb(15, 163, 15);
+    box-shadow: 0 5px 7px 0 rgba(116, 255, 127, 0.65);
+}
+.yellow-shadow{
+    color: #ffea30;
+    box-shadow: 0 5px 7px 0 rgba(255, 253, 105, 0.65);
+}
+.orange-shadow{
+    color: orange;
+    box-shadow: 0 5px 7px 0 rgba(255, 199, 116, 0.65);
+}
+.red-shadow{
+    color: rgb(227, 50, 50);
+    box-shadow: 0 5px 7px 0 rgba(255, 105, 105, 0.65);
+}

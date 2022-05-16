@@ -1,0 +1,136 @@
+.profiles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-box {
+  display: flex;
+  align-items: center;
+}
+
+.social {
+  color: var(--text-primary);
+  line-height: 25px;
+  margin: 0;
+}
+
+.social,
+.btn {
+  margin-right: 15px;
+}
+
+/* .resume{
+      transform: translateY(-7px);
+      border-radius: 0;
+      border: 1px solid #000;
+      padding: 5px 7px;
+      font-size: 1.2rem;
+  } */
+
+.btn {
+  position: relative;
+  padding: 1.2rem 0;
+  padding-left: 15px;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  cursor: pointer;
+  transform: translateY(-4px);
+  user-select: none;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+.btn:before,
+.btn:after {
+  content: "";
+  position: absolute;
+  transition: inherit;
+  z-index: -1;
+}
+
+.btn:hover {
+  color: var(--background);
+  transition-delay: 0.5s;
+}
+
+.btn:hover:before {
+  transition-delay: 0s;
+}
+
+.btn:hover:after {
+  background: var(--text-primary);
+  transition-delay: 0.35s;
+}
+
+.from-left:before,
+.from-left:after {
+  top: 0;
+  width: 0;
+  height: 100%;
+}
+
+.from-left:before {
+  right: 0;
+  border: 1px solid var(--border);
+  border-left: 0;
+  border-right: 0;
+}
+
+.from-left:after {
+  left: 0;
+}
+
+.from-left:hover:before,
+.from-left:hover:after {
+  width: 100%;
+}
+
+.linkedin:hover {
+  --underline: #0077b5;
+  color: #0077b5;
+}
+.github:hover {
+  --underline: #666;
+  color: #666;
+}
+.hackerrank:hover {
+  --underline: #00b551;
+  color: #00b551;
+}
+.twitter:hover {
+  color: #00acee;
+  --underline: #00acee;
+}
+
+.resume-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media screen and (max-width: 500px) {
+  .social,
+  .btn {
+    margin-right: 5px;
+  }
+
+  .btn {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 0.6rem;
+    letter-spacing: 0.65rem;
+    font-size: 1rem;
+  }
+
+  .btn:before,
+  .btn:after {
+    display: none;
+  }
+  .btn:hover {
+    color: var(--text-primary);
+  }
+}

@@ -1,38 +1,132 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300;400;500;600;700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+:root {
+  --background: #ededed;
+  --text-primary: #000;
+  --text-secondary: #2169e5;
+  --accent: #505050;
+  --border: #000;
+  --form-bg: #f0f0f0;
+  --mini-nav: #a2a2a2f0;
+  --shadow: rgba(48, 48, 48, 0.6) 0 7px 15px 0;
+  --underline: #000;
+  --skill-bg: rgb(255, 255, 255);
+  --skill-shadow: 0 5px 5px 0 rgba(81, 81, 81, 0.4);
+  --highlight: rgb(207, 0, 0);
+}
+
+[data-theme="dark"] {
+  --background: #121212;
+  --text-primary: #fff;
+  --text-secondary: #2169e5;
+  --accent: #abc1ff;
+  --border: #fff;
+  --form-bg: #1a1a1a;
+  --mini-nav: #2a2a2af0;
+  --underline: #fff;
+  --shadow: rgba(66, 84, 147, 0.4) 0px 10px 15px 0px;
+  --skill-bg: rgb(26, 26, 26);
+  --skill-shadow: 0 5px 7px 0 rgba(146, 175, 255, 0.25);
+  --highlight: rgb(0, 201, 57);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  min-height: 100%;
+  width: 100%;
   text-align: center;
+  overflow: overlay;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root {
+  min-height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: var(--background);
+  -webkit-transition: background-color 300ms linear;
+  -ms-transition: background-color 300ms linear;
+  transition: background-color 300ms linear;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 500px) {
+  .app {
+    height: 100%;
+    padding-top: 5%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+.heading{
+  color: var(--text-primary);
+  margin: auto;
+  padding-bottom: 5px;
+  margin-top: 20px;
+  font-size: 3rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  width: fit-content;
+}
+
+.link:before {
+  content: "";
+  display: inline;
+  width: 0;
+  height: 0.2em;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--underline);
+  transition: width .2s ease-in;
+}
+
+.link:hover::before,
+.link:focus::before {
+  width: 100%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #606060;
+  border-radius: 100px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+
+::selection {
+  background-color: rgba(70, 70, 70, 0.2);
+  color: #2ace25;
+}
+
+@media screen and (max-width: 500px) {
+  .bottom {
+    height: 80px;
   }
 }
