@@ -1,36 +1,72 @@
-import React from "react";
+import React, { useState } from "react";
 import { about, contact } from "../../portfolio";
+import { motion } from "framer-motion";
 import CallIcon from "@mui/icons-material/Call";
+import { Tooltip } from "@mui/material";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import "./Contact.css";
 function Contact() {
+  const [copyText, setCopyText] = useState("Click to copy");
+  const copyField = (data) => {
+    navigator.clipboard.writeText(data);
+    setCopyText("Copied");
+  };
   return (
-    <>
+    <motion.div
+      initial={{width: 0}}
+      animate={{width: '100%'}}
+      exit={{x: Window.innerWidth}}
+    >
       <h1 className="heading link">CONTACT</h1>
       <div className="personal-details">
-        <img
+        <LazyLoadImage
+          effect="blur"
           src="/images/avatar.jpg"
           alt="profile-pic"
           className="profile-pic"
         />
         <div className="details-data">
           <span className="data-title">Contact Card</span>
-          <img
+          <LazyLoadImage
+            effect="blur"
             src="/images/qr_linkedin.png"
             alt="QR Chip"
             className="qr-code"
           />
-          <span className="data-phone">
-            <CallIcon />
-            &nbsp;{contact.mobile}
-          </span>
+          <Tooltip title={copyText} placement="right">
+            <span
+              className="data-phone"
+              onMouseOut={() => {
+                setCopyText("Click to copy");
+              }}
+              onClick={() => {
+                copyField(contact.mobile);
+              }}
+            >
+              <CallIcon />
+              &nbsp;{contact.mobile}
+            </span>
+          </Tooltip>
           <hr className="data-hr" />
           <div className="bottom-data">
             <span className="data-name">{about.name}</span>
-            <span className="data-email">{contact.email}</span>
+            <Tooltip title={copyText} placement="right">
+              <span
+                className="data-email"
+                onMouseOut={() => {
+                  setCopyText("Click to copy");
+                }}
+                onClick={() => {
+                  copyField(contact.email);
+                }}
+              >
+                {contact.email}
+              </span>
+            </Tooltip>
           </div>
         </div>
       </div>
-    </>
+    </motion.div>
   );
 }
 

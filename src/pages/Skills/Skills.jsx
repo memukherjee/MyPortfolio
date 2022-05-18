@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import SocialProfiles from "../../components/SocialProfiles/SocialProfiles";
 import { skills } from "../../portfolio";
 import "./Skills.css";
@@ -15,7 +16,7 @@ function Skills() {
   const hoverShadow = (e) => {
     const element = e.target;
     const color = colors[Math.floor(Math.random() * 7)];
-    element.classList = "skill-box " + color+"-shadow";
+    element.classList = "skill-box " + color + "-shadow";
   };
 
   const unHover = (e) => {
@@ -31,7 +32,11 @@ function Skills() {
   // }, []);
 
   return (
-    <>
+    <motion.div
+      initial={{width: 0}}
+      animate={{width: '100%'}}
+      exit={{x: Window.innerWidth}}
+    >
       <h1 className="heading link">SKILLS</h1>
       <ul className="skills">
         {skills.map((skill, index) => {
@@ -48,7 +53,7 @@ function Skills() {
         })}
       </ul>
       <SocialProfiles />
-    </>
+    </motion.div>
   );
 }
 
