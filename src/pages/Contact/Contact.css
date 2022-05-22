@@ -3,11 +3,6 @@
   margin: 40px auto;
   margin-top: 5em;
   position: relative;
-  transition: all 0.5s;
-}
-
-.personal-details:hover {
-  transform: rotateX(10deg) rotateZ(1deg);
 }
 
 .profile-pic {
@@ -18,6 +13,7 @@
   top: 20px;
   left: 60%;
   transform: translate(-50%, -50%);
+  transition: all 0.5s;
   margin: auto;
 }
 
@@ -110,6 +106,20 @@
   font-family: 'Roboto Condensed', sans-serif;
   cursor: pointer;
   font-size: 1.05rem;
+}
+
+@media screen and (min-width: 850px) {
+  .profile-pic:hover{
+    transform: translate(-50%, -50%) rotateX(10deg) rotateZ(3deg) scale(1.1);
+  }
+  .data-phone,
+  .data-email{
+    transition: all 0.5s;
+  }
+  .data-phone:hover,
+  .data-email:hover{
+    transform: scale(1.02);
+  }
 }
 
 @media screen and (max-width: 570px) {

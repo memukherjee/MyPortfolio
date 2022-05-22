@@ -13,9 +13,9 @@ function Contact() {
   };
   return (
     <motion.div
-      initial={{width: 0}}
-      animate={{width: '100%'}}
-      exit={{x: Window.innerWidth}}
+      initial={window.innerWidth>850?{width: 0}:{opacity: 0}}
+      animate={window.innerWidth>850?{width: '100%'}:{opacity:1}}
+      exit={window.innerWidth>850?{x: Window.innerWidth}:{opacity:0}}
     >
       <h1 className="heading link">CONTACT</h1>
       <div className="personal-details">
