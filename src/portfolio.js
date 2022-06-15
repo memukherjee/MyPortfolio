@@ -64,6 +64,13 @@ const projects = [
     livePreview: "https://discord.com/oauth2/authorize?client_id=935102650754678784&scope=bot",
   },
   {
+    name: "Stone Paper Scissor Android App",
+    description:
+      "Basic android app to play Stone Paper Scissor game based upon the basic input output facilities of the android ecosystem",
+    stack: ["Java", "Gradle", "XML"],
+    sourceCode: "https://github.com/memukherjee/Stone-Paper-Scissor-Android-App",
+  },
+  {
     name: "Random Meme & Jokes Chrome Extension",
     description:
       "Chrome extension to generate random meme and jokes using api call.",
