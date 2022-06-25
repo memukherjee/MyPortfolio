@@ -14,6 +14,11 @@
     transform: translateY(-7px);
 }
 
+.project-icon{
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+}
+
 .project-name{
     font-weight: 900;
     font-size: 1.75rem;
@@ -46,6 +51,7 @@
 .source-link{
   padding-bottom: 0.3em;
   margin: 20px 10px;
+  font-size: 1.4rem;
 }
 
 .source-link:hover{

@@ -3,6 +3,7 @@ import Zoom from "@mui/material/Zoom";
 import { styled } from "@mui/material/styles";
 import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const LightTooltip = styled(({ className, ...props }) => (
   <Tooltip {...props} classes={{ popper: className }} />
@@ -40,13 +41,13 @@ function Navitem({ theme, Icon, title, selected }) {
           placement="bottom"
         >
           <Link className={`nav-link `+(selected && "selected")} to={"/" + targetPath}>
-            <Icon />
+            <FontAwesomeIcon icon={Icon} />
           </Link>
         </LightTooltip>
       ) : (
         <DarkTooltip TransitionComponent={Zoom} title={title} placement="bottom">
           <Link className={`nav-link `+(selected && "selected")} to={"/" + targetPath}>
-            <Icon />
+          <FontAwesomeIcon icon={Icon} />
           </Link>
         </DarkTooltip>
       )}

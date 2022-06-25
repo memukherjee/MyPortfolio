@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import SocialProfiles from "../../components/SocialProfiles/SocialProfiles";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { skills } from "../../portfolio";
 import "./Skills.css";
+import { useState } from "react";
 function Skills() {
   const colors = [
     "violet",
@@ -13,15 +15,16 @@ function Skills() {
     "orange",
     "red",
   ];
+
+  const [skillClass, setSkillClass] = useState({elementText: '', color: ''})
+
   const hoverShadow = (e) => {
-    const element = e.target;
-    const color = colors[Math.floor(Math.random() * 7)];
-    element.classList = "skill-box " + color + "-shadow";
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    setSkillClass({elementText: e.target.innerText, color: `${color}-shadow`})
   };
 
-  const unHover = (e) => {
-    const element = e.target;
-    element.classList = "skill-box ";
+  const unHover = () => {
+    setSkillClass({elementText: '', color: ''});
   };
 
   // React.useEffect(() => {
@@ -45,9 +48,10 @@ function Skills() {
               key={index}
               onMouseOut={unHover}
               onMouseOver={hoverShadow}
-              className="skill-box"
+              className={`skill-box ${skill.name===skillClass.elementText?skillClass.color:''}`}
             >
-              {skill}
+              { skill.icon && <FontAwesomeIcon className="skill-icon" icon={skill.icon} /> }
+              {skill.name && skill.name}
             </li>
           );
         })}

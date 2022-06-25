@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { about } from "../../portfolio";
 import "./SocialProfile.css";
@@ -14,7 +15,7 @@ function SocialProfiles() {
               href={e.url}
               className={`social link ${e.name}`}
             >
-              {e.icon}
+              <FontAwesomeIcon icon={e.icon} />
             </a>
             {index + 1 === about.socials.length / 2 && (
               <div className="btn from-left">

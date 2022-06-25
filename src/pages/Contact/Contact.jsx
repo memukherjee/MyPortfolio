@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { about, contact } from "../../portfolio";
 import { motion } from "framer-motion";
-import CallIcon from "@mui/icons-material/Call";
 import { Tooltip } from "@mui/material";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import "./Contact.css";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
 function Contact() {
   const [copyText, setCopyText] = useState("Click to copy");
   const copyField = (data) => {
@@ -43,7 +45,7 @@ function Contact() {
                 copyField(contact.mobile);
               }}
             >
-              <CallIcon />
+              <FontAwesomeIcon icon={faPhone} />
               &nbsp;{contact.mobile}
             </span>
           </Tooltip>

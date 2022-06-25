@@ -1,11 +1,14 @@
 import React from "react";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkIcon from "@mui/icons-material/Link";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import "./ProjectBox.css";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 
 function ProjectBox({ project }) {
   return (
     <div className="project-box">
+      {project.icon && <FontAwesomeIcon className="project-icon" icon={project.icon} />}
       <h3 className="project-name">{project.name}</h3>
       <p className="project-desc">{project.description}</p>
       <div className="stack">
@@ -17,12 +20,12 @@ function ProjectBox({ project }) {
       </div>
       {project.sourceCode && (
         <a target="_blank" rel="noreferrer" href={project.sourceCode} className="link source-link">
-          <GitHubIcon />
+        <FontAwesomeIcon icon={faGithub} />
         </a>
       )}
       {project.livePreview && (
         <a target="_blank" rel="noreferrer" href={project.livePreview} className="link source-link">
-          <LinkIcon />
+        <FontAwesomeIcon icon={faLink} />
         </a>
       )}
     </div>
