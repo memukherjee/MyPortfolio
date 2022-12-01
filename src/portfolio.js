@@ -23,7 +23,8 @@ import {
   faCode,
   faM,
   faE,
-  faDatabase
+  faDatabase,
+  faFilm
 } from "@fortawesome/free-solid-svg-icons";
 
 const newline = "<br>&emsp;&emsp;";
@@ -60,6 +61,14 @@ const about = {
 
 const projects = [
   {
+    name: "Twitter Clone",
+    icon: faTwitter,
+    description: "Social media application with functionalities like posting, liking, deleting, Singup with Google, etc. Similar to twitter with clone UI.",
+    stack: ["NodeJS", "EJS", "Bootstrap", "HarperDB"],
+    sourceCode: "https://github.com/memukherjee/Nagarro-Projects/tree/main/twitter-clone",
+    livePreview: "https://me-twitter.herokuapp.com/",
+  },
+  {
     name: "To Do App [MERN]",
     icon: faClipboardList,
     description:
@@ -93,6 +102,14 @@ const projects = [
     sourceCode: "https://github.com/memukherjee/Discord-Bot",
     livePreview:
       "https://discord.com/oauth2/authorize?client_id=935102650754678784&scope=bot",
+  },
+  {
+    name: "OMDB Movie Finder",
+    icon: faFilm,
+    description: "Frontend application to search for movies using OMDB API. Shows the details of the movie like poster, description, release year.",
+    stack: ["HTML", "Javascript", "Bootstrap"],
+    sourceCode: "https://github.com/memukherjee/Nagarro-Projects/tree/main/OMDB-api",
+    livePreview: "https://memukherjee.github.io/Nagarro-Projects/OMDB-api/",
   },
   {
     name: "Stone Paper Scissor Android App",
